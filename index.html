@@ -1,83 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio BTS SIO Gabin ANDRE - SISR</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Gabin ANDRE, étudiant en BTS SIO option SISR">
+  <title>Portfolio BTS SIO - Gabin ANDRE</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Portfolio BTS SIO - SISR</h1>
-    <p>Étudiant en alternance – Spécialité Infrastructure</p>
+  <!-- Hero Section avec image pleine largeur -->
+  <header class="hero">
+    <img src="assets/images/image_rgb.jpeg" alt="Background" class="hero-image">
+    <div class="hero-overlay">
+      <h1>Gabin ANDRE</h1>
+      <p class="subtitle">Étudiant en BTS SIO option SISR</p>
+    </div>
   </header>
+
+  <!-- Navigation -->
   <nav>
-    <a href="#presentation">Présentation</a>
-    <a href="#lan">LAN CS</a>
-    <a href="#ad">Active Directory</a>
-    <a href="#autres">Autres Projets</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
+    <ul>
+      <li><a href="#presentation"><i class="fas fa-user"></i> Présentation</a></li>
+      <li><a href="#projets"><i class="fas fa-project-diagram"></i> Projets</a></li>
+      <li><a href="#veille-techno"><i class="fas fa-binoculars"></i> Veille Technologique</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
   </nav>
 
-  <section id="presentation">
-    <h2>Présentation</h2>
-    <p>Étudiant en BTS SIO option SISR, je suis en alternance depuis 8 mois dans une entreprise où j'assure le support technique de niveau 1. J’interviens quotidiennement sur des problématiques utilisateurs, matérielles et logicielles.</p>
-    <p>J’utilise la suite Office (Word, Excel, Outlook, Teams...) tous les jours, et je développe mes compétences en administration système avec notamment l’apprentissage des GPO (Group Policy Objects).</p>
-  </section>
+  <!-- Contenu principal avec marges -->
+  <main class="main-container">
+    <!-- Section Présentation -->
+    <section id="presentation" class="section">
+      <h2><span class="section-number">01.</span> Présentation</h2>
+      <div class="section-content">
+        <p>Étudiant en BTS SIO option SISR, je suis en alternance depuis 8 mois dans une entreprise où j'assure le support technique de niveau 1. J'interviens quotidiennement sur des problématiques utilisateurs, matérielles et logicielles.</p>
+        <p>J'utilise la suite Office (Word, Excel, Outlook, Teams...) et développe mes compétences en administration système avec notamment l'apprentissage des GPO (Group Policy Objects).</p>
+      </div>
+    </section>
 
-  <section id="lan" class="project">
-    <h2>Projet 1 : LAN CS</h2>
-    <p><strong>Contexte :</strong> LAN Party sur Counter-Strike avec installation réseau local.</p>
-    <code>
-#!/bin/bash
+    <!-- Section Projets -->
+    <section id="projets" class="section">
+      <h2><span class="section-number">02.</span> Projets</h2>
+      <div class="section-content">
+        <!-- Projet LAN -->
+        <article class="project-card">
+          <h3>LAN Counter-Strike</h3>
+          <div class="project-meta">
+            <span class="project-date">2024</span>
+            <span class="project-tag">Réseau</span>
+            <span class="project-tag">Linux</span>
+          </div>
+          <p>Organisation d'une LAN Party avec installation réseau local complète.</p>
+          <div class="code-snippet">
+            <pre><code>#!/bin/bash
 cd /home/steam/cs_server
-./srcds_run -game cstrike +map de_dust2 +maxplayers 10
-    </code>
-    <img src="https://via.placeholder.com/800x400.png?text=LAN+Network+Topology" alt="LAN Network Topology">
-  </section>
+./srcds_run -game cstrike +map de_dust2 +maxplayers 10</code></pre>
+          </div>
+          <img src="assets/images/lan-topology.png" alt="Topologie réseau LAN" class="project-img">
+        </article>
 
-  <section id="ad" class="project">
-    <h2>Projet 2 : Active Directory</h2>
-    <p><strong>Contexte :</strong> Réorganisation de l'annuaire d'entreprise sous Windows Server.</p>
-    <code>
-for ($i = 1; $i -le 10; $i++) {
-    New-ADUser -Name "utilisateur$i" -SamAccountName "utilisateur$i" -AccountPassword (ConvertTo-SecureString "Password123" -AsPlainText -Force) -Enabled $true
-}
-    </code>
-    <img src="https://via.placeholder.com/800x400.png?text=AD+Structure" alt="AD Structure">
-  </section>
+        <!-- Projet AD -->
+        <article class="project-card">
+          <h3>Migration Active Directory</h3>
+          <div class="project-meta">
+            <span class="project-date">2024</span>
+            <span class="project-tag">Windows Server</span>
+            <span class="project-tag">PowerShell</span>
+          </div>
+          <p>Réorganisation de l'annuaire d'entreprise sous Windows Server.</p>
+          <div class="code-snippet">
+            <pre><code>for ($i = 1; $i -le 10; $i++) {
+  New-ADUser -Name "utilisateur$i" -Enabled $true
+}</code></pre>
+          </div>
+          <img src="assets/images/ad-structure.png" alt="Structure AD" class="project-img">
+        </article>
+      </div>
+    </section>
 
-  <section id="autres" class="project">
-    <h2>Autres Projets</h2>
-    <ul>
-      <li>Supervision Zabbix & GLPI</li>
-      <li>Sécurisation VLAN Wi-Fi invité</li>
-      <li>Documentation pour audit réseau</li>
-      <li><strong>Refonte d'une baie informatique :</strong> remplacement d’un switch obsolète, organisation physique et logique des connexions réseau</li>
-    </ul>
-  </section>
+    <!-- Section Veille Technologique -->
+    <section id="veille-techno" class="section">
+      <h2><span class="section-number">03.</span> Veille Technologique</h2>
+      <div class="section-content">
+        <p>Je m'intéresse aux dernières tendances et innovations dans le domaine des technologies de l'information. Voici quelques sujets que je suis actuellement :</p>
+        <ul>
+          <li>Les avancées en matière de cybersécurité</li>
+          <li>Les nouvelles technologies de virtualisation</li>
+          <li>Les évolutions des protocoles réseau</li>
+          <li>Les outils de gestion et de supervision des systèmes</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="cv" class="project">
-    <h2>Mon CV</h2>
-    <p>Téléchargez mon CV ici : <a href="#">Lien vers le CV (PDF)</a></p>
-  </section>
-
-  <section id="contact" class="project">
-    <h2>Contact</h2>
-    <form>
-      <label>Nom :</label>
-      <input type="text" name="name" placeholder="Votre nom" />
-      <label>Email :</label>
-      <input type="email" name="email" placeholder="Votre email" />
-      <label>Message :</label>
-      <textarea name="message" rows="6" placeholder="Votre message ici..."></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
+    <!-- Section Contact -->
+    <section id="contact" class="section">
+      <h2><span class="section-number">04.</span> Contact</h2>
+      <div class="section-content contact-grid">
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> gabin.andre@email.com</p>
+          <p><i class="fas fa-phone"></i> +33 6 12 34 56 78</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+          </div>
+          <button type="submit" class="btn submit-btn"><i class="fas fa-paper-plane"></i> Envoyer</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Portfolio BTS SIO - SISR</p>
+    <p>© 2025 Gabin ANDRE - Portfolio BTS SIO</p>
   </footer>
+  <script src="assets/script.js"></script>
 </body>
 </html>
