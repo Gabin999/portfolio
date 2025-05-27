@@ -29,8 +29,92 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 50vh; /* Réduction de la hauteur */
+  height: 50vh;
   overflow: hidden;
+}
+
+/* Menu latéral fixe */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 80px;
+  background-color: var(--dark-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: width 0.3s;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.sidebar:hover {
+  width: 300px;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: bold;
+  font-size: 2.5rem; /* Taille de police augmentée */
+  color: var(--primary);
+  letter-spacing: 5px; /* Espacement des lettres augmenté */
+  margin: 75px 0 0 0; /* Ajout de marge en haut */
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-content a {
+  color: var(--light);
+  text-decoration: none;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+  width: 100%;
+  justify-content: center;
+}
+
+.sidebar-content a:hover {
+  color: var(--primary);
+}
+
+.sidebar-content i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  min-width: 30px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sidebar:hover .sidebar-content i {
+  opacity: 1;
+}
+
+.sidebar-content .contact-info {
+  opacity: 0;
+  transition: opacity 0.3s;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.sidebar:hover .contact-info {
+  opacity: 1;
 }
 
 .hero-image {
@@ -101,6 +185,7 @@ nav a:hover {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--content-padding);
+  margin-left: 80px;
 }
 
 .section {
@@ -255,5 +340,31 @@ footer {
   nav ul {
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .sidebar:hover {
+    width: 100%;
+  }
+
+  .sidebar-content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .sidebar-content .contact-info {
+    display: none;
+  }
+
+  .main-container {
+    margin-left: 0;
   }
 }
