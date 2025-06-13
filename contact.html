@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Portfolio BTS SIO</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Menu latéral -->
+  <div class="sidebar">
+    <div class="sidebar-content">
+      <div class="contact-text">CONTACT</div>
+      <div class="contact-links">
+        <a href="mailto:gabin.andre999@gmail.com"><i class="fas fa-envelope"></i><span class="contact-info">Email</span></a>
+        <a href="tel:+33767599554"><i class="fas fa-phone"></i><span class="contact-info">Téléphone</span></a>
+        <a href="https://linkedin.com/in/gabin--andre" target="_blank"><i class="fab fa-linkedin"></i><span class="contact-info">LinkedIn</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barre de navigation principale -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+      <li><a href="gtinfo.html"><i class="fas fa-user"></i> GT INFORMATIQUE</a></li>
+      <li><a href="projets.html"><i class="fas fa-project-diagram"></i> Projets</a></li>
+      <li><a href="veille-techno.html"><i class="fas fa-binoculars"></i> Veille</a></li>
+      <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenu principal -->
+  <main class="main-container">
+    <section class="section">
+      <h2><span class="section-number">04.</span> Contact</h2>
+      
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Coordonnées</h3>
+          <p><a href="mailto:gabin.andre999@gmail.com"><i class="fas fa-envelope"></i> gabin.andre999@gmail.com</a></p>
+          <p><a href="tel:+33767599554"><i class="fas fa-phone"></i> 07 67 59 95 54</a></p>
+          
+          <div class="social-links">
+            <a href="https://linkedin.com/in/gabin--andre" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Gabin999" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form" action="https://formsubmit.co/gabin.andre999@gmail.com" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Votre email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+          </div>
+          <!-- Anti-spam -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Envoyer</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Gabin ANDRE - BTS SIO</p>
+  </footer>
+  <script src="assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets - Portfolio BTS SIO</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Menu latéral -->
+  <div class="sidebar">
+    <div class="sidebar-content">
+      <div class="contact-text">CONTACT</div>
+      <div class="contact-links">
+        <a href="mailto:gabin.andre999@gmail.com"><i class="fas fa-envelope"></i><span class="contact-info">Email</span></a>
+        <a href="tel:+33767599554"><i class="fas fa-phone"></i><span class="contact-info">Téléphone</span></a>
+        <a href="https://linkedin.com/in/gabin--andre" target="_blank"><i class="fab fa-linkedin"></i><span class="contact-info">LinkedIn</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barre de navigation -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+      <li><a href="gtinfo.html"><i class="fas fa-user"></i> GT INFORMATIQUE</a></li>
+      <li><a href="projets.html" class="active"><i class="fas fa-project-diagram"></i> Projets</a></li>
+      <li><a href="veille-techno.html"><i class="fas fa-binoculars"></i> Veille</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenu -->
+  <main class="main-container">
+    <section class="section">
+      <h2><span class="section-number">02.</span> Projets</h2>
+      
+      <!-- Projet Baie Informatique -->
+      <article class="project-card">
+        <h3>Déploiement de baie informatique - Restaurant Fond-Rose (Lyon)</h3>
+        
+        <div class="project-meta">
+          <span class="project-date">2024</span>
+          <span class="project-tag">Réseau</span>
+          <span class="project-tag">Sécurité</span>
+        </div>
+        
+        <h4>Contexte :</h4>
+        <p>Installation d'une infrastructure complète pour un système de vidéosurveillance dans un restaurant lyonnais.</p>
+        
+        <h4>Réalisations :</h4>
+        <ul class="project-tasks">
+          <li><i class="fas fa-check-circle"></i> Installation physique de la baie réseau 19"</li>
+          <li><i class="fas fa-check-circle"></i> Configuration du switch PoE (Alimentation par Ethernet)</li>
+          <li><i class="fas fa-check-circle"></i> Câblage réseau des caméras IP</li>
+        </ul>
+
+        <div class="project-images">
+          <img src="assets/images/baie_fondrose.jpg" alt="Baie réseau installée" class="project-img">
+        </div>
+      </article>
+
+      <!-- Projet Infrastructure SISR -->
+      <article class="project-card">
+        <h3>Projet de Groupe - Mise en place d’une infrastructure pédagogique SISR</h3>
+        
+        <div class="project-meta">
+          <span class="project-date">2024</span>
+          <span class="project-tag">Virtualisation</span>
+          <span class="project-tag">Administration réseau</span>
+          <span class="project-tag">Gestion de parc</span>
+        </div>
+        
+        <h4>Contexte :</h4>
+        <p>Création d'une infrastructure réseau complète dédiée à une salle pédagogique pour les étudiants SISR.</p>
+
+        <h4>Réalisation :</h4>
+        <ul class="project-tasks">
+          <li><i class="fas fa-check-circle"></i> Mise en place de 10 postes clients filaires et Wi-Fi</li>
+          <li><i class="fas fa-check-circle"></i> Installation et configuration de VMware ESXi sur un serveur physique</li>
+          <li><i class="fas fa-check-circle"></i> Déploiement d’une VM Windows Server 2019 pour héberger GLPI et un serveur CS2 (Counter-Strike 2)</li>
+          <li><i class="fas fa-check-circle"></i> Configuration réseau avec routeur Cisco et plan d’adressage DHCP</li>
+          <li><i class="fas fa-check-circle"></i> Déploiement de GLPI avec l’agent sur chaque poste pour la supervision du parc</li>
+          <li><i class="fas fa-check-circle"></i> Installation et configuration du serveur de jeu CS2 et scripts personnalisés (start.bat, server.cfg)</li>
+        </ul>
+
+        <h4>Outils utilisés :</h4>
+        <div class="tech-badges">
+          <span class="tech-badge">VMware ESXi</span>
+          <span class="tech-badge">Windows Server 2019</span>
+          <span class="tech-badge">GLPI</span>
+          <span class="tech-badge">Agent GLPI</span>
+          <span class="tech-badge">XAMPP</span>
+          <span class="tech-badge">Cisco CLI</span>
+          <span class="tech-badge">Steam / CS2</span>
+          <span class="tech-badge">Packet Tracer</span>
+          <span class="tech-badge">Putty</span>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Gabin ANDRE</p>
+  </footer>
+  <script src="assets/script.js"></script>
+</body>
+</html>
