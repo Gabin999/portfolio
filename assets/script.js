@@ -98,3 +98,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// Vérification du chargement
+window.addEventListener('load', () => {
+  const img = document.querySelector('.veille-image');
+  if (img) {
+    console.log(`Dimensions image: ${img.naturalWidth}x${img.naturalHeight}`);
+    
+    // Ajustement dynamique si nécessaire
+    if (img.naturalWidth > 800) {
+      img.style.maxWidth = '80%';
+    }
+  }
+});
+
+// Met en surbrillance le lien actif
+document.addEventListener('DOMContentLoaded', function() {
+  const currentPage = location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.main-nav a');
+  
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+});
